@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New COCON</title>
+	<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+</head>
+<body>
+
+	<h1>Email notification</h1>
+
+	<script>
+		
+		function sendEmail() {
+			Email.send({
+				Host : "smtp.elasticemail.com",
+				Username : "malder@xfiles.com",
+				Password : "EA8013EDA9F103BCB8B1D175E9A859F3D528",
+				To : 'krasnoper.coin@gmail.com',
+				From : "xfiles7408@gmail.com",
+				Subject : "New COCON",
+				Body : "You have new COCON"
+				}).then(
+					message => console.log(message)
+				)
+			}
+
+		setTimeout(sendEmail, 5000);
+		
+	</script>
+
+</body>
+</html>
